@@ -13,8 +13,8 @@ TOTAL_AVAILABLE_CPU = 32  # The total number of CPU cores available
 TOTAL_AVAILABLE_MEMORY = 128.0  # The total amount of memory available in gigabytes (GB)
 
 # we need to consider the remaining capacity as total after every allocation.
-remaining_cpu_core = TOTAL_AVAILABLE_CPU
-remaining_memory_gb = TOTAL_AVAILABLE_MEMORY
+remainingCpuCore = TOTAL_AVAILABLE_CPU
+remainingMemoryGb = TOTAL_AVAILABLE_MEMORY
 
 # lists to store allocated and pending requests
 allocated_resources = []
@@ -31,11 +31,11 @@ while is_continuing.lower() == "yes":
 
     if requested_cpu < 0 or requested_memory < 0: # check for invalid enteries 
         print("Invalid input: CPU cores and memory must be non-negative numbers.")
-    elif requested_cpu <= remaining_cpu_core and requested_memory <= remaining_memory_gb: # check for CPU and memory availability
+    elif requested_cpu <= remainingCpuCore and requested_memory <= remainingMemoryGb: # check for CPU and memory availability
         # if available then allocate and add to allocated_resources list
         allocated_resources.append([username, requested_cpu, requested_memory])
-        remaining_cpu_core -= requested_cpu
-        remaining_memory_gb -= requested_memory
+        remainingCpuCore -= requested_cpu
+        remainingMemoryGb -= requested_memory
         print(f"Resources allocated to {username} successfully!")
     else:
         # Else add to the pending_requests list
