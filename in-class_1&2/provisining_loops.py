@@ -20,7 +20,7 @@ remaining_memory_gb = TOTAL_AVAILABLE_MEMORY
 allocated_resources = []
 pending_requests = []
 
-# Loop to handle multiple resource requests
+
 is_continuing = "yes"
 
 while is_continuing.lower() == "yes":
@@ -29,34 +29,33 @@ while is_continuing.lower() == "yes":
     requested_cpu = int(input("Enter the number of CPU cores required: "))
     requested_memory = float(input("Enter the amount of memory (in GB) required: "))
 
-    # Check if the requested resources are valid and available
-    if requested_cpu < 0 or requested_memory < 0:
+    if requested_cpu < 0 or requested_memory < 0: # check for invalid enteries 
         print("Invalid input: CPU cores and memory must be non-negative numbers.")
-    elif requested_cpu <= remaining_cpu_core and requested_memory <= remaining_memory_gb:
-        # Allocate resources
+    elif requested_cpu <= remaining_cpu_core and requested_memory <= remaining_memory_gb: # check for CPU and memory availability
+        # if available then allocate and add to allocated_resources list
         allocated_resources.append([username, requested_cpu, requested_memory])
         remaining_cpu_core -= requested_cpu
         remaining_memory_gb -= requested_memory
         print(f"Resources allocated to {username} successfully!")
     else:
-        # Add to pending requests
+        # Else add to the pending_requests list
         pending_requests.append([username, requested_cpu, requested_memory])
         print(f"Resources not available for {username}, added to pending requests.")
 
-    # Check if the user wants to make another request
-    is_continuing = input("Do you want to make another request? (yes/no): ")
+    # Checking for continuation 
+    is_continuing = input("Do you want to make more request? (yes/no): ")
 
-# Display the results in a table-like format
-print("\n***** Allocated Resources: *****")
+# result table 
+print("\n***** Allocated Resources: *****") # allocated resources table 
 print("-" * 40)
 for detail in allocated_resources:
     
     print(f"Username: {detail[0]} \t CPU cores: {detail[1]} \t Memory (GB): {detail[2]}")
     
 
-print("\n***** Pending Requests: *****")
+print("\n***** Pending Requests: *****") # pending requests table 
 print("-" * 40)
-for record in pending_requests:
+for detail in pending_requests:
     
-    print(f"Username: {record[0]} \t CPU cores: {record[1]} \t Memory (GB): {record[2]}")
+    print(f"Username: {detail[0]} \t CPU cores: {detail[1]} \t Memory (GB): {detail[2]}")
    
