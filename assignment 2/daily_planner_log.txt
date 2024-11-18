@@ -1,0 +1,12 @@
+{"date": "2024-11-17 10:37:47", "location": "Toronto", "weather": "Clouds", "recommendation": "The weather is neutral. A walk or light outdoor activity could be refreshing."}
+[2024-11-17 21:26:34] User: Ankita, City: Toronto, Weather: Overcast clouds, 8.78°C, Suggestions: The weather is clouds with 8.78°C. Plan your day accordingly!
+[2024-11-17 21:30:05] User: Kush, City: Jind, Weather: Clear sky, 18.9°C, Suggestions: 
+ It's sunny with 18.9°C. Great for a walk or an outdoor activity!
+[2024-11-17 21:30:55] User: Priya, City: Mumbai, Weather: Smoke, 26.99°C, Suggestions: 
+ The weather is smoke with 26.99°C. Plan your day accordingly!
+[2024-11-17 21:32:13] User: Vicky, City: London, Weather: Light rain, 7.75°C, Suggestions: 
+ It's rainy with 7.75°C. How about an indoor activity like yoga or reading?
+[2024-11-17 21:35:29] User: ankita, City: toronto, Weather: Overcast clouds, 8.78°C, Suggestions: 
+ The weather is clouds with 8.78°C. Plan your day accordingly!
+[2024-11-17 23:05:30] User: ankita, City: toronto, Weather: Overcast clouds, 9.71°C, Suggestions: 
+ The weather is clouds with 9.71°C. Plan your day accordingly!
